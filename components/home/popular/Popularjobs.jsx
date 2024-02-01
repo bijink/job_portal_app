@@ -5,11 +5,15 @@ import { useRouter } from "expo-router";
 import styles from "./popularjobs.style";
 import { COLORS, SIZES } from "../../../constants";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
+import useFetch from "../../../hook/useFetch";
 
 const Popularjobs = () => {
   const router = useRouter();
-  const isLoading = false;
-  const error = false;
+
+  const { data, isLoading, error } = useFetch("search", {
+    query: "Python developer in india",
+    num_pages: "1",
+  });
 
   return (
     <View style={styles.container}>
@@ -19,7 +23,7 @@ const Popularjobs = () => {
           <Text style={styles.headerBtn}>Show all</Text>
         </TouchableOpacity>
       </View>
-      <View tyle={styles.cardsContainer}>
+      {/* <View tyle={styles.cardsContainer}>
         {isLoading ? (
           <ActivityIndicator size='larger' color={COLORS.primary} />
         ) : error ? (
@@ -33,7 +37,7 @@ const Popularjobs = () => {
             horizontal
           />
         )}
-      </View>
+      </View> */}
     </View>
   );
 };
