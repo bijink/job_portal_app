@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { Stack, useRouter } from "expo-router";
 import { COLORS, SIZES, icons, images } from "../constants";
 import { Nearbyjobs, Popularjobs, Welcome, ScreenHeaderBtn } from "../components";
@@ -7,6 +7,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 export default function Home() {
   const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -26,7 +27,15 @@ export default function Home() {
             padding: SIZES.medium,
           }}
         >
-          <Welcome />
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`);
+              }
+            }}
+          />
           <Popularjobs />
           <Nearbyjobs />
         </View>
