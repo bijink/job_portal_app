@@ -1,5 +1,5 @@
 {
-  "name": "react_native_jobs",
+  "name": "job_portal_app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
-    "@babel/plugin-proposal-export-namespace-from": "^7.18.9"
+    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "expo-dev-client": "^3.3.8"
   },
   "resolutions": {
     "metro": "^0.73.7",

@@ -5,7 +5,18 @@
       "bundler": "metro"
     },
     "plugins": ["expo-router"],
-    "name": "react_native_jobs",
-    "slug": "react_native_jobs"
+    "name": "Job Portal App",
+    "slug": "job_portal_app",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "28e47417-8d93-4a7d-acda-be819c31a776"
+      }
+    },
+    "android": {
+      "package": "com.bijink.job_portal_app"
+    }
   }
 }
