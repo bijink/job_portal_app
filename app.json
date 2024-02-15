@@ -4,7 +4,9 @@
     "web": {
       "bundler": "metro"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router"
+    ],
     "name": "Job Portal App",
     "slug": "job_portal_app",
     "extra": {
@@ -12,7 +14,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "28e47417-8d93-4a7d-acda-be819c31a776"
+        "projectId": "f65cd4e5-7185-4a4e-b34a-780a7bb1c6d6"
       }
     },
     "android": {

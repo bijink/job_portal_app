@@ -10,6 +10,9 @@
     "preview1": {
       "android": {
         "buildType": "apk"
+      },
+      "env": {
+        "RAPID_API_KEY": ""
       }
     },
     "preview2": {
